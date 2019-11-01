@@ -36,22 +36,33 @@ struct Stack<Element>: Container {
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var returnField: UITextField!
     @IBOutlet weak var insertField: UITextField!
     @IBOutlet weak var deletedLabel: UILabel!
     @IBOutlet weak var countlabel: UILabel!
+    @IBOutlet weak var returnLabel: UILabel!
+    
+    var list = Stack<String>()
     
     @IBAction func insertButton(_ sender: Any) {
-        Stack.push(insertField.text)
-        insertField.clearsOnInsertion
+        guard let str = insertField.text else { return }
+        list.push(String(str))
+        insertField.text = ""
     }
+    
     @IBAction func deleteButton(_ sender: Any) {
-        Stack.pop()
+        deletedLabel.text = list.pop()
     }
+    
     @IBAction func countButton(_ sender: Any) {
-        countlabel.text = Stack.count()
+        guard list.count != 0 else {return}
+        countlabel.text = String(list.count)
     }
     
-    
+    @IBAction func returnButton(_ sender: Any) {
+        guard let inum = Double(returnField.text) else {return}
+        returnLabel.text = String(list[inum-1])
+        }
 
 }
 
