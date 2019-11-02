@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7882C5AD236DE99500396D45 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7882C5AC236DE99500396D45 /* Stack.swift */; };
+		7882C5AF236DEB3500396D45 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7882C5AE236DEB3500396D45 /* Extensions.swift */; };
 		FF37D423236883A300AAF564 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF37D422236883A300AAF564 /* AppDelegate.swift */; };
 		FF37D425236883A300AAF564 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF37D424236883A300AAF564 /* ViewController.swift */; };
 		FF37D428236883A300AAF564 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF37D426236883A300AAF564 /* Main.storyboard */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7882C5AC236DE99500396D45 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		7882C5AE236DEB3500396D45 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		FF37D41F236883A300AAF564 /* Task1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Task1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF37D422236883A300AAF564 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF37D424236883A300AAF564 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,10 +78,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7882C5AB236DE8C500396D45 /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				FF37D422236883A300AAF564 /* AppDelegate.swift */,
+				FF37D42B236883AA00AAF564 /* LaunchScreen.storyboard */,
+				FF37D42E236883AA00AAF564 /* Info.plist */,
+			);
+			path = Project;
+			sourceTree = "<group>";
+		};
 		FF37D416236883A300AAF564 = {
 			isa = PBXGroup;
 			children = (
 				FF37D421236883A300AAF564 /* Task1 */,
+				7882C5AB236DE8C500396D45 /* Project */,
+				FF37D429236883AA00AAF564 /* Assets.xcassets */,
 				FF37D436236883AA00AAF564 /* Task1Tests */,
 				FF37D441236883AA00AAF564 /* Task1UITests */,
 				FF37D420236883A300AAF564 /* Products */,
@@ -97,12 +113,10 @@
 		FF37D421236883A300AAF564 /* Task1 */ = {
 			isa = PBXGroup;
 			children = (
-				FF37D422236883A300AAF564 /* AppDelegate.swift */,
-				FF37D424236883A300AAF564 /* ViewController.swift */,
 				FF37D426236883A300AAF564 /* Main.storyboard */,
-				FF37D429236883AA00AAF564 /* Assets.xcassets */,
-				FF37D42B236883AA00AAF564 /* LaunchScreen.storyboard */,
-				FF37D42E236883AA00AAF564 /* Info.plist */,
+				FF37D424236883A300AAF564 /* ViewController.swift */,
+				7882C5AC236DE99500396D45 /* Stack.swift */,
+				7882C5AE236DEB3500396D45 /* Extensions.swift */,
 			);
 			path = Task1;
 			sourceTree = "<group>";
@@ -257,7 +271,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF37D425236883A300AAF564 /* ViewController.swift in Sources */,
+				7882C5AD236DE99500396D45 /* Stack.swift in Sources */,
 				FF37D423236883A300AAF564 /* AppDelegate.swift in Sources */,
+				7882C5AF236DEB3500396D45 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,7 +449,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Task1/Info.plist;
+				DEVELOPMENT_TEAM = HGBKWU27FW;
+				INFOPLIST_FILE = "$(SRCROOT)/Project/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -441,7 +458,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Sber.Task1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -450,7 +467,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Task1/Info.plist;
+				DEVELOPMENT_TEAM = HGBKWU27FW;
+				INFOPLIST_FILE = "$(SRCROOT)/Project/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -458,7 +476,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Sber.Task1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

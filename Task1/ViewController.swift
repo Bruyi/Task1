@@ -8,42 +8,20 @@
 
 import UIKit
 
-protocol Container {
-    associatedtype Item
-    mutating func append(_ item: Item)
-    var count: Int { get }
-    subscript(i: Int) -> Item { get }
-}
-
-struct Stack<Element>: Container {
-    var items = [Element]()
-    mutating func push(_ item: Element) {
-        items.append(item)
-    }
-    mutating func pop() -> Element {
-        return items.removeFirst()
-    }
-    mutating func append(_ item: Element) {
-        self.push(item)
-    }
-    var count: Int {
-        return items.count
-    }
-    subscript(i: Int) -> Element {
-        return items[i]
-    }
-}
-
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
     
-    @IBOutlet weak var returnField: UITextField!
-    @IBOutlet weak var insertField: UITextField!
-    @IBOutlet weak var deletedLabel: UILabel!
-    @IBOutlet weak var countlabel: UILabel!
-    @IBOutlet weak var returnLabel: UILabel!
+    @IBOutlet private weak var returnField: UITextField!
+    @IBOutlet private weak var insertField: UITextField!
     
-    var list = Stack<String>()
+    @IBOutlet private weak var deletedLabel: UILabel!
+    @IBOutlet private weak var countlabel: UILabel!
+    @IBOutlet private weak var returnLabel: UILabel!
     
+    
+    private var list = Stack<String>()
+    
+    
+    // MARK: - Buttons
     @IBAction func insertButton(_ sender: Any) {
         guard let str = insertField.text else { return }
         list.push(String(str))
@@ -60,10 +38,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func returnButton(_ sender: Any) {
-        guard let inum = Double(returnField.text) else {return}
-        returnLabel.text = String(list[inum-1])
-        }
-
+//        guard let inum = Double(returnField.text) else {return}
+//        returnLabel.text = String(list[inum-1])
+    }
+    
 }
-
-extension Array: Container {}
