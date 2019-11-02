@@ -10,12 +10,15 @@ import UIKit
 
 final class ViewController: UIViewController {
     
-    @IBOutlet private weak var returnField: UITextField!
-    @IBOutlet private weak var insertField: UITextField!
-    
-    @IBOutlet private weak var deletedLabel: UILabel!
+    // count
     @IBOutlet private weak var countlabel: UILabel!
-    @IBOutlet private weak var returnLabel: UILabel!
+    // add
+    @IBOutlet private weak var addTextField: UITextField!
+    // delete
+    @IBOutlet private weak var deleteValueLabel: UILabel!
+    // search
+    @IBOutlet private weak var searchTextField: UITextField!
+    @IBOutlet private weak var searchValueLabel: UILabel!
     
     
     private var list = Stack<String>()
@@ -28,22 +31,22 @@ final class ViewController: UIViewController {
     
     
     // MARK: - Buttons
-    @IBAction func insertButton(_ sender: Any) {
-        guard let str = insertField.text, !str.isEmpty else { return }
-        insertField.text = ""
-        list.push(str)
+    @IBAction func addButtonHit(_ sender: Any) {
+        guard let str = addTextField.text, !str.isEmpty else { return }
+        addTextField.text = ""
+        list.append(str)
         updateCountElement()
     }
     
-    @IBAction func deleteButton(_ sender: Any) {
-        deletedLabel.text = list.pop()
+    @IBAction func deleteButtonHit(_ sender: Any) {
+        deleteValueLabel.text = list.pop()
         updateCountElement()
     }
     
-    @IBAction func returnButton(_ sender: Any) {
-        guard let index = returnField.text, !index.isEmpty else { return }
-        guard let i = UInt(index) else { return }
-        returnLabel.text = String(list[Int(i)])
+    @IBAction func searchButtonHit(_ sender: Any) {
+        guard let index = searchTextField.text, !index.isEmpty else { return }
+        guard let i = UInt(index), let value = list[i] else { return }
+        searchValueLabel.text = value
         updateCountElement()
     }
     

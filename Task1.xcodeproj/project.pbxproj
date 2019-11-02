@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7882C5AD236DE99500396D45 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7882C5AC236DE99500396D45 /* Stack.swift */; };
-		7882C5AF236DEB3500396D45 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7882C5AE236DEB3500396D45 /* Extensions.swift */; };
 		FF37D423236883A300AAF564 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF37D422236883A300AAF564 /* AppDelegate.swift */; };
 		FF37D425236883A300AAF564 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF37D424236883A300AAF564 /* ViewController.swift */; };
 		FF37D428236883A300AAF564 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF37D426236883A300AAF564 /* Main.storyboard */; };
@@ -37,7 +36,6 @@
 
 /* Begin PBXFileReference section */
 		7882C5AC236DE99500396D45 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
-		7882C5AE236DEB3500396D45 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		FF37D41F236883A300AAF564 /* Task1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Task1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF37D422236883A300AAF564 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF37D424236883A300AAF564 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -116,7 +114,6 @@
 				FF37D426236883A300AAF564 /* Main.storyboard */,
 				FF37D424236883A300AAF564 /* ViewController.swift */,
 				7882C5AC236DE99500396D45 /* Stack.swift */,
-				7882C5AE236DEB3500396D45 /* Extensions.swift */,
 			);
 			path = Task1;
 			sourceTree = "<group>";
@@ -273,7 +270,6 @@
 				FF37D425236883A300AAF564 /* ViewController.swift in Sources */,
 				7882C5AD236DE99500396D45 /* Stack.swift in Sources */,
 				FF37D423236883A300AAF564 /* AppDelegate.swift in Sources */,
-				7882C5AF236DEB3500396D45 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

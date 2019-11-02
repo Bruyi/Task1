@@ -10,25 +10,27 @@
 protocol Container {
     associatedtype Item
     
-    var count: Int { get }
+    var count: UInt { get }
     
     mutating func append(_ item: Item)
-    subscript(i: Int) -> Item { get }
+    mutating func pop() -> Item?
+    
+    subscript(i: UInt) -> Item? { get }
 }
 
 
 
 // MARK: - Stack
 struct Stack<Element>: Container {
-    
+  
     private var items = [Element]()
     
-    var count: Int {
-        return items.count
+    var count: UInt {
+        return UInt(items.count)
     }
     
     // Functions
-    mutating func push(_ item: Element) {
+    mutating func append(_ item: Element) {
         items.append(item)
     }
     
@@ -37,12 +39,10 @@ struct Stack<Element>: Container {
         return items.removeFirst()
     }
     
-    mutating func append(_ item: Element) {
-        self.push(item)
-    }
-    
-    subscript(i: Int) -> Element {
-        return items[i]
+    subscript(i: UInt) -> Element? {
+        guard count > 0 else { return nil }
+        guard Int(i) <= Int(count - 1) else { return nil }
+        return items[Int(i)]
     }
     
 }
