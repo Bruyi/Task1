@@ -6,4 +6,4 @@
 //  Copyright © 2019 Bruyi. All rights reserved.
 //
 
-extension Array: Container {}
+extension Array: Container { }

@@ -21,25 +21,30 @@ final class ViewController: UIViewController {
     private var list = Stack<String>()
     
     
+    // MARK: - Interface
+    private func updateCountElement() {
+        countlabel.text = String(list.count)
+    }
+    
+    
     // MARK: - Buttons
     @IBAction func insertButton(_ sender: Any) {
-        guard let str = insertField.text else { return }
-        list.push(String(str))
+        guard let str = insertField.text, !str.isEmpty else { return }
         insertField.text = ""
+        list.push(str)
+        updateCountElement()
     }
     
     @IBAction func deleteButton(_ sender: Any) {
         deletedLabel.text = list.pop()
-    }
-    
-    @IBAction func countButton(_ sender: Any) {
-        guard list.count != 0 else {return}
-        countlabel.text = String(list.count)
+        updateCountElement()
     }
     
     @IBAction func returnButton(_ sender: Any) {
-//        guard let inum = Double(returnField.text) else {return}
-//        returnLabel.text = String(list[inum-1])
+        guard let index = returnField.text, !index.isEmpty else { return }
+        guard let i = UInt(index) else { return }
+        returnLabel.text = String(list[Int(i)])
+        updateCountElement()
     }
     
 }

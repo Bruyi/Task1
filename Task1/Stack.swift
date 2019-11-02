@@ -32,7 +32,8 @@ struct Stack<Element>: Container {
         items.append(item)
     }
     
-    mutating func pop() -> Element {
+    mutating func pop() -> Element? {
+        guard count > 0 else { return nil }
         return items.removeFirst()
     }
     
